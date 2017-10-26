@@ -1,0 +1,76 @@
+---
+layout: post
+title:  "Set up Jenkins on Debian"
+date:   2017-08-21 12:43:53 +0900
+categories: Web/Jenkins
+---
+
+On Debian-based distributions, such as Ubuntu, you can install Jenkins through apt-get.
+
+Prerequisite : JDK and JRE over 1.7
+
+### Prerequisite: Install Java 8
+
+Add java source list.{% highlight sh %}
+$ sudo vim /etc/apt/sources.list.d/java-8-debian.list
+{% endhighlight %}
+
+{% highlight deb %}
+deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main
+deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main
+{% endhighlight %}
+
+Import GPG key {% highlight sh %}
+$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
+{% endhighlight %}
+
+Install Java 8
+{% highlight sh %}
+$ sudo apt-get update
+$ sudo apt-get install oracle-java8-installer
+$ java -version
+{% endhighlight %}
+
+<br>
+### Installation
+
+
+{% highlight sh %}
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+{% endhighlight %}
+
+Try browsing `<host_name>:8080`
+
+[https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu](https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu)
+<br>
+### Initial Setup
+
+#### First login
+initial login is:<br>
+Account : admin<br>
+Passwd  :(Check /var/lib/jenkins/secrets/initialAdminPassword)
+
+#### Home Dir
+`/var/lib/jenkins`
+
+#### Process Management
+start \| stop \| status \| restart \| force-reload jenkins,<br>
+{%highlight sh%}
+$ service jenkins {start|stop|status|restart|force-reload}
+{%endhighlight%}
+or
+{%highlight sh%}
+$ sudo /etc/init.d/jenkins {start|stop|status|restart|force-reload}
+{%endhighlight%}
+
+#### User Management
+1. From home_dir(/var/lib/jenkins)/config.xml, edit `<useSecurity>false</useSecurity> `
+2. From Web Console, Goto Manage Jenkins > Configure Global Security.<br>
+3. Select the "Enable Security" check box.
+4. Select "Jenkins Own User Database" for the security realm and then select "Logged in Users can do anything"
+   (or "matrix based strategy" for multiple users with different permissions) for the Authorization.
+
+
