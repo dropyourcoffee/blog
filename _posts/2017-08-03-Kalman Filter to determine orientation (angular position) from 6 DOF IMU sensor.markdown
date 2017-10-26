@@ -2,12 +2,12 @@
 layout: post
 title:  "Kalman Filter to determine orientation (angular position) from 6 DOF IMU sensor"
 date:   2017-08-03 10:43:53 +0900
-categories: IMU
+categories: Algorithms/IMU
 ---
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 Estimating orientation by measuring gravitational acceleration with accelerometer is very reactive however, it is in general very noisy since it always has noise due to translational movements.
-On the other hand, we could double-integrate angular acceleration measured by gyroscope to determine the angular velocity, however the problem with the gyro is that it drifts over time,
+On the other hand, we could integrate angular velocity measured by gyroscope to determine the angular position, however the problem with the gyro is that it drifts over time,
 
 In short,
 * Orientation estimate from *accelerometer* over a time period can be trusted, but instantaneous data is not accurate.
@@ -49,7 +49,7 @@ $$ I $$           : 2x2 Identity Matrix<br>
 
 ![ State Transition Model]({{ site.url }}/img/2017-08-03-img3.png)
 <br>
-### Example C Code
+### Kalman Filter - Example C Code
 {% highlight cpp %}
 // Kalman.c
 
@@ -115,3 +115,13 @@ double getVal(int num) {
   }
 };
 {% endhighlight %}
+
+### Quaternions
+
+Relative orientation can be evaluated by the simple kinematic equation,
+$$    \hat{q} $$  = 0.5 * q Ⓧ w
+
+There are also [other IMUalgorithms](http://x-io.co.uk/open-source-imu-and-ahrs-algorithms/) oepn-source algorithms available.
+
+
+
