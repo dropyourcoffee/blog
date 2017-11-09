@@ -2,7 +2,7 @@
 layout: post
 title:  "AST System Clock Implementation (nRF52 example)"
 date:   2017-07-18 12:43:53 +0900
-categories: Embedded/nRF52
+categories: Embedded nRF52
 ---
 
 

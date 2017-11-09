@@ -28,12 +28,12 @@ We continuously update accelerometer(input with noise) with gyro data(true value
 
 * Time update(Prediction)
 In Prediction, we estimate values based on input + previous state<br>
-![Time Update(Prediction)]({{ site.url }}/img/2017-08-03-img1.jpeg)<br>
+![Time Update(Prediction)]({{ site.baseurl }}/img/2017-08-03-img1.jpeg)<br>
 *Time Update(Prediction)*
 
 * Measurement update(Correction)
 In Measurement, we compare previous estimate with actual measurement and modulate Kalman Gain.<br>
-![Measurement Update(Correction)]({{ site.url }}/img/2017-08-03-img2.jpeg)<br>
+![Measurement Update(Correction)]({{ site.baseurl }}/img/2017-08-03-img2.jpeg)<br>
 *Measurement Update(Correction)*
 <br><br>
 where, <br>
@@ -47,7 +47,7 @@ $$ R $$           : Measurement Covariance (Noise)<br>
 $$ z_k $$         : Actual Measurement<br>
 $$ I $$           : 2x2 Identity Matrix<br>
 
-![ State Transition Model]({{ site.url }}/img/2017-08-03-img3.png)
+![ State Transition Model]({{ site.baseurl }}/img/2017-08-03-img3.png)
 <br>
 ### Kalman Filter - Example C Code
 {% highlight cpp %}

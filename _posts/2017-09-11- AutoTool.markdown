@@ -1,0 +1,50 @@
+---
+layout: post
+title:  "AutoTools"
+date:   2017-09-11 12:43:53 +0900
+categories: C/C++
+---
+
+
+
+### Prerequisite
+$ wget ftp://ftp.gnu.org/gnu/m4/m4-1.4.10.tar.gz
+
+Extracting files from the downloaded package:
+$ tar -xvzf m4-1.4.10.tar.gz
+
+Now, enter the directory where the package is extracted.
+
+$ cd m4-1.4.10
+
+Configuring m4:
+$ ./configure --prefix=/usr/local/m4
+
+Replace "/usr/local/m4" above with the directory path where you want to copy the files and folders. Note: check for any error message.
+
+Compiling m4:
+$ make
+
+
+### Autoconf
+
+source : http://ftp.gnu.org/gnu/automake/
+
+
+
+
+[autoconf install HOWTO](http://www.gnu.org/software/autoconf/autoconf.html)
+
+[KDLP wiki Autotools](https://wiki.kldp.org/wiki.php/DocbookSgml/Autotools-KLDP#AEN217)
+
+
+### Install Troubleshoot
+
+%n in writable segment detected
+means
+number(%n) is placed somewhere inappropriate.
+if this happens while installation you can do :
+
+grep "%n" -R
+
+[http://savannah.nongnu.org/bugs/?35432](http://savannah.nongnu.org/bugs/?35432)

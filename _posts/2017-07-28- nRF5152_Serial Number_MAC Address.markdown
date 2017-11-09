@@ -2,7 +2,7 @@
 layout: post
 title:  "nRF51/52 Checking Serial No. / MAC Address"
 date:   2017-07-28 12:43:53 +0900
-categories: Embedded/nRF52
+categories: Embedded nRF52
 ---
 
 Nordic softdevice provides APIS regarding BLE and MAC address on nRF51 and 52.
