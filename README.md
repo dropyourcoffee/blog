@@ -1,24 +1,13 @@
-Jekyll Xixia
-============
 
-* Get it from [github](https://github.com/zxixia/jekyll-xixia).
-* See the [live demo](http://zxixia.github.io/jekyll-xixia/).
-* See it [in action on my own blog](http://xixia.info/).
+[Jekyll Xixia](https://github.com/zxixia/jekyll-xixia)
+==============
+
+* [github](https://github.com/zxixia/jekyll-xixia).
 
 A simple and clean Jekyll theme using [bootstrap](http://getbootstrap.com)
 (not to be confused with jekyll-bootstrap) that's easy to modify and very
 modular in component and element reuse.
 
-The theme works well on mobile phones, using a collapsable nav bar and hiding the
-sidebar. The links pane in the sidebar is available on mobile through the nav menu,
-and you can do the same thing for any other sections added to the sidebar.
-
-Don't forget to occassionally merge against my upstream repository so you can get
-the latest changes. Pull requests are encouraged and accepted!
-
-Preview
-=======
-![Xixia](/assets/images/preview.png)
 
 License
 =======
