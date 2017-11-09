@@ -1,16 +1,18 @@
 # Jekyll configuration
 
+twitter_username:
+github_username:  dropyourcoffee
 name: DropYourCoffee
 description: Try Everything
 
 # url is currently only used only for the RSS feed in feed.xml
-url: https://github.com/zxixia/jekyll-xixia
+url: "https://dropyourcoffee.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # baseurl will often be '', but for a project page on gh-pages, it needs to
 # be the project name.
 # *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
 #     run it like so: jekyll serve --baseurl=''
-baseurl: '/jekyll-xixia'
+baseurl: "" # the subpath of your site, e.g. /blog
 ## default date_format
 date_format: 
   title: "%B-%-d-%Y"
