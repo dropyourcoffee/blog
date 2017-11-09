@@ -31,7 +31,7 @@ $$ ki = j, ik = -j $$<br>
 
 The formula for 3D rotation(Sandwich Product)can be represented as:
 
-![Transformation]({{ site.url }}/img/2017-08-05-img3.png)
+![Transformation]({{ site.baseurl }}/img/2017-08-05-img3.png)
 
 Double multiplication 'i' now represents a 90° for each multiplication, that is, 90°+90°=180° and similarly for 'j' and 'k'.
 

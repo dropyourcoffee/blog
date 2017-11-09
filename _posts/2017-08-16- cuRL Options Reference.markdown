@@ -2,7 +2,7 @@
 layout: post
 title:  "cURL Option Reference"
 date:   2017-08-16 12:43:53 +0900
-categories: Etc
+categories: Web
 ---
 
 ### Request Options

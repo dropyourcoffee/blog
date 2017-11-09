@@ -1,0 +1,62 @@
+---
+layout: post
+title:  "How to use ini file in C++"
+date:   2017-09-15 12:43:53 +0900
+categories: C/C++
+---
+
+Use .ini to change initial values,
+프로그램을 하다보면 초기값만을 바꿔야 하는 경우가 있습니다.
+그럴경우 ini파일을 이용하면 편리합니다.
+역시 2개의 함수를 이용해 읽고 쓸 수 있습니다.
+-읽을때
+{% highlight cpp %}
+GetPrivateProfileString(
+  __in   LPCTSTR lpAppName,
+  __in   LPCTSTR lpKeyName,
+  __in   LPCTSTR lpDefault,
+  __out  LPTSTR lpReturnedString,
+  __in   DWORD nSize,
+  __in   LPCTSTR lpFileName
+);
+{% endhighlight %}
+
+-쓸때
+{% highlight cpp %}
+WritePrivateProfileString(
+  __in  LPCTSTR lpAppName,
+  __in  LPCTSTR lpKeyName,
+  __in  LPCTSTR lpString,
+  __in  LPCTSTR lpFileName
+);
+{% endhighlight %}
+
+ex)
+init.ini
+{% highlight cpp %}
+-------------------------
+[INPUT_VAL]
+val1 = Test1
+val2 = Test2
+--------------------
+{% endhighlight %}
+이라면
+
+{% highlight cpp %}
+char
+Temp[100];
+GetPrivateProfileString("INPUT_VAL","val1","NOT_FOUND",Temp,100,"./init.ini");
+{% endhighlight %}
+
+이렇게 써서 값을 읽을 수 있습니다.
+
+쓸때는
+
+{% highlight cpp %}
+WritePrivateProfileString(("INPUT_VAL","val1","Test10","./init.ini");
+{% endhighlight %}
+
+으로 val1값을 갱신할 수 있습니다.
+
+[http://www.dongwun.com/tc/71?category=60](http://www.dongwun.com/tc/71?category=60)
+

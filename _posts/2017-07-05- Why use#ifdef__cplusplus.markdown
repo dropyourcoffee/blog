@@ -2,7 +2,7 @@
 layout: post
 title:  "Use of extern C"
 date:   2017-07-05 12:43:53 +0900
-categories: Embedded/C_C++
+categories: Embedded C/C++
 ---
 
 In C++17, new `__cpluscplus` was defined as 201703L.

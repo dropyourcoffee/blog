@@ -2,7 +2,7 @@
 layout: post
 title:  "Shell script Tip - Piping a result to script argument"
 date:   2017-08-14 12:43:53 +0900
-categories: Linux/Bash
+categories: Linux/bash
 ---
 
 While writing a script for a jobs scheduling or for any kind of deployment, it is sometimes needed to 

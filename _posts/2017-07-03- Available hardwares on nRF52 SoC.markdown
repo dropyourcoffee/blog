@@ -2,7 +2,7 @@
 layout: post
 title:  "Available hardwares on nRF52 SoC"
 date:   2017-07-03 12:43:53 +0900
-categories: Embedded/nRF52
+categories: Embedded nRF52
 ---
 
 

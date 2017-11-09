@@ -2,7 +2,8 @@
 layout: post
 title:  "Set up Jenkins on Debian"
 date:   2017-08-21 12:43:53 +0900
-categories: Web/Jenkins
+tags: Jenkins
+categories: Web
 ---
 
 On Debian-based distributions, such as Ubuntu, you can install Jenkins through apt-get.

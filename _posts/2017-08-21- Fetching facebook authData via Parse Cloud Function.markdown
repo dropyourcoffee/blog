@@ -2,7 +2,7 @@
 layout: post
 title:  "Fetching Facebook authdata via Parse Cloud Function"
 date:   2017-08-21 12:43:53 +0900
-categories: Web/Parse-Server
+categories: Web Parse-Server
 ---
 
 Fetching To access Facebook authdata from parse-server Cloud Function.<br>
@@ -56,4 +56,4 @@ const SearchUser=(parseId,callback) => {
 {% endhighlight %}
 
 ### Result
-![facebook authData appended]({{site.url}}/img/2017-08-21-img1.png)
+![facebook authData appended]({{site.baseurl}}/img/2017-08-21-img1.png)

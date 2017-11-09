@@ -2,7 +2,7 @@
 layout: post
 title:  "Accessing memory budget in C (instead of assembly)"
 date:   2017-07-21 12:43:53 +0900
-categories: Embedded/C_C++
+categories: Embedded C/C++
 ---
 
 #### 1. Label the memory symbols in assembly file(startup_<device>.s).
