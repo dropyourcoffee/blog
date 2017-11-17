@@ -8,43 +8,130 @@ categories: C/C++
 
 
 ### Prerequisite
-$ wget ftp://ftp.gnu.org/gnu/m4/m4-1.4.10.tar.gz
+
+
+#### aclocal
+{% highlight sh %}
+wget ftp://ftp.gnu.org/gnu/m4/m4-1.4.10.tar.gz
+{% endhighlight %}
 
 Extracting files from the downloaded package:
-$ tar -xvzf m4-1.4.10.tar.gz
+{% highlight sh %}
+tar -xvzf m4-1.4.10.tar.gz
+{% endhighlight %}
 
 Now, enter the directory where the package is extracted.
-
+{% highlight sh %}
 $ cd m4-1.4.10
+{% endhighlight %}
 
 Configuring m4:
-$ ./configure --prefix=/usr/local/m4
+
+{% highlight sh %}
+./configure --prefix=/usr/local/m4
+{% endhighlight %}
 
 Replace "/usr/local/m4" above with the directory path where you want to copy the files and folders. Note: check for any error message.
 
 Compiling m4:
-$ make
+{% highlight sh %}
+make
+{% endhighlight %}
 
 
-### Autoconf
+#### Autoconf
 
 source : http://ftp.gnu.org/gnu/automake/
 
-
-
-
 [autoconf install HOWTO](http://www.gnu.org/software/autoconf/autoconf.html)
+
+----
+
+Autotools unifies the build process of C/C++ applications(and libraries) by auto-generating consistent Makefile.
+
+![Autotool Diagram]({{site.baseurl}}/img/2017-09-11-img1.png)
+<br><br>
+#### 1. Run `$ autoscan` to generate and configure.scan and copy the file as *configure.ac*
+
+Generated scan file looks like :
+
+{% highlight sh %}
+                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ([2.69])
+AC_INIT([FULL-PACKAGE-NAME], [VERSION], [BUG-REPORT-ADDRESS])
+AC_CONFIG_SRCDIR([hello-core/main.c])
+AC_CONFIG_HEADERS([config.h])
+
+# Checks for programs.
+AC_PROG_CC
+
+# Checks for libraries.
+
+# Checks for header files.
+AC_CHECK_HEADERS([stdlib.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+
+# Checks for library functions.
+
+AC_CONFIG_FILES([Makefile
+                 hello-core/Makefile
+                 tester/Makefile])
+AC_OUTPUT
+{% endhighlight %}
+<br>
+#### 2. Edit configure.ac
+Replace the `FULL-PACKAGE-NAME`, `VERSION`.
+
+Insert a line `AM_INIT_AUTOMAKE`.
+
+Add following lines for:
+ - `AC_PROG_RANLIB` Library Compiles
+ - `AC_LANG(C++)`    Build C++ src
+ - `AC_PROG_CXX`     Build C src
+ - `AC_PROG_CC`      Build C src(alternative)
+
+#### 3. Run `$ aclocal` to generate aclocal.m4 file.
+<br>
+#### 4. For Each Directories for compilation, write Makefile.am
+
+On top directory,
+{% highlight sh %}
+# ./Makefile.am
+SUBDIRS = hello-core tester
+{% endhighlight %}
+For sub-directories,
+
+{% highlight sh %}
+# ./hello-core/Makefile.am
+bin_PROGRAMS = hello
+hello_SOURCES = hello.c main.c
+{% endhighlight %}
 
 [KDLP wiki Autotools](https://wiki.kldp.org/wiki.php/DocbookSgml/Autotools-KLDP#AEN217)
 
+#### 5. Create mandatory files.
+{%highlight sh%}
+touch NEWS README AUTHORS ChangeLog
+{% endhighlight %}
+#### 6. Run `$ autoconf`
+Generate *configure* file
+#### 7. For any edits, run `$ autoreconf -fvi`
+This is the end of distribution
+
+#### 8. Users can compile the source by :
+{% highlight sh %}
+./configure
+./make
+{% endhighlight %}
 
 ### Install Troubleshoot
 
-%n in writable segment detected
-means
-number(%n) is placed somewhere inappropriate.
-if this happens while installation you can do :
-
+`%n in writable segment detected ***`<br>
+<br>
+Search for the script where '%n' was used.
+{% highlight sh %}
 grep "%n" -R
-
-[http://savannah.nongnu.org/bugs/?35432](http://savannah.nongnu.org/bugs/?35432)
+{% endhighlight %}
