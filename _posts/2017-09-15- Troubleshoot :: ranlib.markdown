@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Troubleshoot :: ranlib"
+title:  "Troubleshoot :: ranlib: /usr/lib64/libelf.so.1:version 'ELFUTILS_1.1.1' not found"
 date:   2017-09-15 12:43:53 +0900
-tags: ranlib
+tags: Troubleshoot ranlib
 categories: Linux/bash
 ---
 
