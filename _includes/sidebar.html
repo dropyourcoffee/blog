@@ -21,7 +21,7 @@
     <ul>
         {% for top in site.data.tops %}
             {% for post in site.posts %}
-                {% if post.url contains top.url %}
+                {% if post.title contains top.title %}
                     <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
                 {% endif %}
             {% endfor %}
