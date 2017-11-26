@@ -3,7 +3,7 @@ layout: post
 title:  "Cloud Jobs on Parse Server"
 date:   2017-08-11 12:43:53 +0900
 tags: Parse-Server
-categories: Web Parse-Server
+categories: Web
 ---
 <!--script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script-->
 

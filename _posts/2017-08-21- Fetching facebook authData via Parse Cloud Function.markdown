@@ -3,7 +3,7 @@ layout: post
 title:  "Fetching Facebook authdata via Parse Cloud Function"
 date:   2017-08-21 12:43:53 +0900
 tags: Parse-Server
-categories: Web Parse-Server
+categories: Web
 ---
 
 Fetching To access Facebook authdata from parse-server Cloud Function.<br>
