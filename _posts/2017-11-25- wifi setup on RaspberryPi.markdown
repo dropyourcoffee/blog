@@ -2,8 +2,8 @@
 layout: post
 title:  "Wifi setup on Raspberry Pi"
 date:   2017-11-26 11:43:53 +0900
-tags: Raspberry-Pi
-categories: Linux/bash
+tags: Raspberry-Pi PersonalProject
+categories: ZiktoLab
 ---
 
 Setting up wlan configuration on raspbery Pi.
