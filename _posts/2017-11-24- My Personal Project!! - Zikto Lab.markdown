@@ -3,22 +3,21 @@ layout: post
 title:  "MY PERSONAL PROJECT - Zikto Lab"
 date:   2017-11-24 11:43:53 +0900
 tags: Raspberry-Pi
-categories: Linux/bash
+categories: ZiktoLab
 ---
 
 I started up a small personal project, named Zikto Lab.
 
 ### Motivation
-Activity tracking with wearable devices is being more generalised.
-Basic trackings such as step counts, sleep tracking are available in most wearable devices, however
-these activity tracking functionality is evolving into enhanced tracking with more insights to meet consumer demands.
-Wearable devices with specialised purposes such as [walking posture detection](http://www.sportswearable.net/zikto-walk-is-an-activity-and-a-walking-posture-wearable/) or [recognising repetitive fitness exercise](https://www.youtube.com/watch?v=zpa4rVGlO68)
-are good examples.
+Wearable devices can be easily found these days. (Fitbit, Samsung Gear, Apple Watch, Jawbone UP, Misfit). Traditionally, devices were tracking basic user activities, such as step counts, sleeping pattern and more.
+Then companies are slowly developing more sophisticated products to capture advanced metrics such as [walking posture detection](http://www.sportswearable.net/zikto-walk-is-an-activity-and-a-walking-posture-wearable/) or [recognising repetitive fitness exercise](https://www.youtube.com/watch?v=zpa4rVGlO68)
+ to provide more insightful information back to users.
 
-In order to develop such motion recognition algorithms, relevant data-sampling is a must, however there is no elegant solution available in public for many algorithm researchers
-in organization without any internal development man-force. (Zikto has actually received few love calls from universities and research groups for collaboration).
-The goal of this project is to build a web-based console platform that can communicate objects that supports BLE(Bluetooth Low Energy, or Bluetooth 4.0) to extract or analyse motional (inertial/angular speed) data collected by accelerometer and gyroscrope,
-to let researchers in interest be able to focus on research with few or no efforts on concerning data-sampling environments.
+In order to develop advanced motion recognition algorithm, relevant data sampling is a prior.
+Currently, there is no platform smartly sampling these data, aggregate and arrange in a form that can be easily consumed by researchers especially, for those in organisation cannot afford insourcing tool development. (Zikto has actually received few love calls from universities and research groups for collaboration).
+
+The goal of this project is to develop a web platform that can communicate devices that supports BLE (Bluetooth Low Energy, or Bluetooth 4.0) to collect data (from accelerometer and gyroscope).
+Ultimately this platform will provide a foundation so that researchers/developers can focus on algorithm/business logic with few or no efforts on concerning data-sampling environments.
 
 ### Project Overview
 
