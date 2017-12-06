@@ -15,9 +15,10 @@ these activity tracking functionality is evolving into enhanced tracking with mo
 Wearable devices with specialised purposes such as [walking posture detection](http://www.sportswearable.net/zikto-walk-is-an-activity-and-a-walking-posture-wearable/) or [recognising repetitive fitness exercise](https://www.youtube.com/watch?v=zpa4rVGlO68)
 are good examples.
 
-In order to develop such motion recognition algorithms, data-sampling is a must, however there is no elegant environment available for public use.
-The goal of this project is to build a web-based console platform that can communicate objects that supports BLE(Bluetooth Low Energy, or Bluetooth 4.0) to extract or analyse collected motional (inertial/angular speed) data sampled by accelerometer and gyroscrope,
-to let researcher(s) in interest be able to focus on research with few or no efforts on concerning data-sampling environments.
+In order to develop such motion recognition algorithms, relevant data-sampling is a must, however there is no elegant solution available in public for many algorithm researchers
+in organization without any internal development man-force. (Zikto has actually received few love calls from universities and research groups for collaboration).
+The goal of this project is to build a web-based console platform that can communicate objects that supports BLE(Bluetooth Low Energy, or Bluetooth 4.0) to extract or analyse motional (inertial/angular speed) data collected by accelerometer and gyroscrope,
+to let researchers in interest be able to focus on research with few or no efforts on concerning data-sampling environments.
 
 ### Project Overview
 
