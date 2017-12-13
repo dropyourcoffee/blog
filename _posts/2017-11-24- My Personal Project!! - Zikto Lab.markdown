@@ -45,6 +45,7 @@ For more inquiries, please email [dropyourcoffee@gmail.com](mailto:dropyourcoffe
 ### Special Thanks
 
 I give huge thanks to my CEO, Ted Kim, who happily supported allowance for intellectual properties of Zikto-Walk on this project.
+
 ---
 
 #### Update on 2017-12-13
