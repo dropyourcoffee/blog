@@ -2,7 +2,7 @@
 layout: post
 title:  "MY PERSONAL PROJECT - Zikto Lab"
 date:   2017-11-24 11:43:53 +0900
-tags: Raspberry-Pi
+tags: Raspberry-Pi NodeJS PersonalProject
 categories: ZiktoLab
 ---
 
@@ -45,5 +45,10 @@ For more inquiries, please email [dropyourcoffee@gmail.com](mailto:dropyourcoffe
 ### Special Thanks
 
 I give huge thanks to my CEO, Ted Kim, who happily supported allowance for intellectual properties of Zikto-Walk on this project.
+---
+
+#### Update on 2017-12-13
+Uploaded milestone 1 and demo.
+[See Post]({{ site.baseurl }}/ziktolab/2017/12/13/Zikto-Lab-Milestone1.html)
 
 
