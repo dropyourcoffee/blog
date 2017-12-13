@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "_.map()ing multipler properties at lodash"
+date:   2017-12-09 11:43:53 +0900
+tags: lodash NodeJS
+categories: Web
+---
+
+Found an [elegant one-line solution from lodash github page](https://github.com/lodash/lodash/issues/1247) to pick multiple properties from a collection using lodash.
+
+{% highlight js %}
+_.map(COLLECTION, _.partial(_.ary(_.pick, 2), _, ['PROP_1', 'PROP_2']));
+{% endhighlight %}
+

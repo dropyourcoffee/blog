@@ -2,8 +2,8 @@
 layout: post
 title:  "MY PERSONAL PROJECT - Zikto Lab"
 date:   2017-11-24 11:43:53 +0900
-tags: Raspberry-Pi
-categories: Linux/bash
+tags: Raspberry-Pi NodeJS PersonalProject
+categories: ZiktoLab
 ---
 
 I started up a small personal project, named Zikto Lab.
@@ -38,5 +38,9 @@ NodeJS part will be available on [public ziktoLab repository](https://github.com
 
 For more inquiries, please email [dropyourcoffee@gmail.com](mailto:dropyourcoffee@gmail.com).
 
+---
+#### Update on 2017-12-13
+Uploaded milestone 1 and demo.
+[See Post]({{ site.baseurl }}/ziktolab/2017/12/13/Zikto-Lab-Milestone1.html)
 
 
