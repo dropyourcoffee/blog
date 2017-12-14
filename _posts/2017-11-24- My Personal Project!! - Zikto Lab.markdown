@@ -6,16 +6,6 @@ tags: Raspberry-Pi NodeJS PersonalProject
 categories: ZiktoLab
 ---
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111259622-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-111259622-1');
-</script>
-
 I started up a small personal project, named Zikto Lab.
 
 ### Motivation
