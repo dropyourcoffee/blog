@@ -6,7 +6,7 @@ tags: Openssl
 categories: Linux 
 ---
 
-While setting up Kubernetes cluster for new DevOps for my team, I find myself getting more opportunities to use encrypt/decrpyt datas or set up HTTPS using OpenSSL.
+While setting up Kubernetes cluster for new DevOps for my team, I find more opportunities tas or set up HTTPS using OpenSSL.
 
 Some common commands I use frequently.
 
