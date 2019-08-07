@@ -2,23 +2,26 @@
 layout: post
 title:  "NerdTree basics"
 date:   2019-07-11 11:43:53 +0900
-tags: Docker Kubernetes
+tags: vim
 categories: Linux
 ---
 
-  NERDTree is a sort of file system explorer for the Vim editor.
-  that makes users easier to visually browse complex directory hierarchies, quickly open files for reading or editing, and perform basic file system operations
+  NERDTree is a sort of file system explorer for the Vim editor that makes users easier
+   - Visually browse complex directory hierarchies
+   - Quickly open files for reading or editing
+   - Perform basic file system operations
   
   
-  Basic keymaps for NERDTree explorer, 
+  Basic keymaps for NERDTree explorer
   
-  | Key | Function                                                   |
-  |-----|------------------------------------------------------------|
-  | t   | Open file in new tab                                       |
-  | i   | Open file in new horizontal split view                     |
-  | s   | Open file in new vertical split view                       |
-  | C   | Cursored directory will be the new root in the explorer.   |
-  | U   | Parent of the current root directory will be the new root. |
+  | Key |  Function                                                   |
+  |-----|-------------------------------------------------------------|
+  | t   |  Open file in new tab                                       |
+  | i   |  Open file in new horizontal split view                     |
+  | s   |  Open file in new vertical split view                       |
+  | C   |  Cursored directory will be the new root in the explorer.   |
+  | U   |  Parent of the current root directory will be the new root. |
+  
   
   
   Custom Optimisation
