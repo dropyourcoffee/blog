@@ -6,24 +6,25 @@ categories: Algorithms/IMU
 ---
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-Estimating orientation by measuring gravitational acceleration with accelerometer is very reactive however, it is in general very noisy since it always has noise due to translational movements.
-On the other hand, we could integrate angular velocity measured by gyroscope to determine the angular position, however the problem with the gyro is that it drifts over time,
+Estimating orientation by measuring gravitational acceleration with accelerometer is very responsive however, it generally includes unwanted noise caused by translational movements.
+On the other hand, we could integrate angular velocity measured by gyroscope to determine the angular position but this time, the problem is the 'drifts' over time,
 
 In short,
 * Orientation estimate from *accelerometer* over a time period can be trusted, but instantaneous data is not accurate.
 * Orientation estimate from *gyroscope* over a time period diverges due to accumulated errors by drift, but instantaneous data is generally more accuarate than the former.
 
+To solve this problem, we fuse these two signals to filter out noises each other,using Kalman filter.
+
+
 ### Kalman Filter
 > In any place where you have **uncertain information about some dynamic system**, and you can make an **educated guess** about what the system is going to do next.<br>
 [Kalman filter explanation](http://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/)
 
-Basically, we can use Kalman filter to fuse two inertial sensors and find the optimised gain(Kalman Gain) for each inputs.<br>
-Kalman Filter algorithm consists of two repetitive stages:
+Kalman filter finds optimised gain(Kalman Gain) for each inputs.
+Using this algorithm, converged Kalman gain will be the optimal gain ratio of datas from accelerometer(input with noise) updated based on gyro data(true values)
 
 1. Time Update(Prediction) - Predict gravitational orientation based on accelerometer value and gain<br>
 2. Measurement Update(Correction) - Update the measurement with gravitational orientation based on gyroscope and update gain.<br>
-
-We continuously update accelerometer(input with noise) with gyro data(true values).
 
 
 * Time update(Prediction)

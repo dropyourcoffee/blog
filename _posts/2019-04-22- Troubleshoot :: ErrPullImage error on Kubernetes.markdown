@@ -29,7 +29,7 @@ kubectl get secret docker-registry --output=yaml
 kubectl get secret docker-registry --output="jsonpath={.data.\.dockerconfigjson}" | base64 -d
 ```
 
-Describe the secret file in YAML file in `.spec.template.spec.containers.imagePullSecrets`
+Describe the secret file in YAML file in `.spec.containers.imagePullSecrets`
 ```yaml
 apiVersion: v1
 kind: Pod
